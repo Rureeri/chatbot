@@ -1,0 +1,91 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chatbox">
+        <p>Welcome to the chatbot!</p>
+    </div>
+    <div id="user-input">
+        <form>
+            <input type="radio" name="choice" value="option1"> Option 1
+            <br>
+            <input type="radio" name="choice" value="option2"> Option 2
+            <br>
+            <input type="radio" name="choice" value="option3"> Option 3
+            <br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            var choice = document.querySelector('input[name="choice"]:checked').value;
+            var chatbox = document.getElementById('chatbox');
+
+            var userMessage = document.createElement('p');
+            userMessage.innerHTML = 'User: ' + choice;
+            chatbox.appendChild(userMessage);
+
+            // Make an AJAX request to the server
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/get_response', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var botMessage = document.createElement('p');
+                    botMessage.innerHTML = 'Bot: ' + xhr.responseText;
+                    chatbox.appendChild(botMessage);
+                }
+            };
+            xhr.send('choice=' + choice);
+        }
+    </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>~Mental Health Chatbot~</title>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <!--<img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">-->
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Edo</h4>
+                    <p class="chatbox__description--header">Happy to help!!</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+   <!-- <script>
+       var $SCRIPT_ROOT = "http://127.0.0.1:5000";
+    </script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="chatbox__support">
+            <h2 class="chatbox__heading--header">Survey</h2>
+            <form id="survey-form">
+                {% for index in range(survey_questions_count) %}
+                <div class="question">
+                    <label>{{ get_survey_question(index) }}</label>
+                    <input type="text" name="response{{ index }}" required>
+                </div>
+                {% endfor %}
+                <button type="submit" class="chatbox__send--footer">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        document.getElementById("survey-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const responses = {};
+
+            for (let pair of formData.entries()) {
+                responses[pair[0]] = pair[1];
+            }
+
+            fetch('/analyze_responses', {
+                method: 'POST',
+                body: JSON.stringify(responses),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the recommendations data
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+
+</html>

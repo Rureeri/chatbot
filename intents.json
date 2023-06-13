@@ -1,0 +1,172 @@
+{
+  "intents": [
+    {
+      "tag":"greeting",
+      "patterns":["Hello","Hi","Wassup","Hey"],
+      "responses":[
+        "How was your day?",
+        "What's going on!?",
+        "I'm good ^_^.....how are you?",
+        "How have you been lately?"
+      ] 
+    },
+    {
+      "tag":"feelings",
+      "patterns":[
+        "ok",
+        "Sad",
+        "Weird situation",
+        "happy","Satisfied","Really Lost","No idea","Good","Worried,Anxious"
+      ],
+      "responses":[
+        "Well looks like something isn't right :/",
+        "You can share anything, I'll try my best to help you out",
+        "What happened?",
+        "That's great and I hope you could help others stay positive like you are ^__^ ",
+        "Great to hear that !__!",
+        "That's alright to be lost, take your time. Why not listen to some calm music ~_~",
+        "Keep up your spirits!!",
+        "That's really great to hear XD",
+        "There there, don't worry, everything happens for a reason, be calm"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "I am here for you, see you soon"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure","Have a great day"]
+    },
+
+    {
+      "tag": "casual",
+      "patterns": [
+        "How's your day going?",
+        "What are your hobbies?",
+        "Tell me a joke",
+        "Do you have any pets?",
+        "What's your favorite movie?",
+        "What's the weather like today?"
+      ],
+      "responses": [
+        "My day is going well, thanks! How about yours?",
+        "I don't have hobbies, but I enjoy chatting with you!",
+        "Sure, here's a joke: Why don't scientists trust atoms? Because they make up everything!",
+        "I don't have any pets, but I'm a great companion!",
+        "I'm an AI, so I don't watch movies, but I'm here to help you!",
+        "I'm not able to check the weather, but I hope it's pleasant wherever you are!"
+      ]
+    },
+    {
+      "tag": "fun",
+      "patterns": [
+        "Tell me something interesting",
+        "Do you have any fun facts?",
+        "What's the meaning of life?",
+        "Can you sing a song?",
+        "Do you play any instruments?",
+        "What's your favorite food?"
+      ],
+      "responses": [
+        "Did you know that the average person laughs about 15 times a day?",
+        "Sure, here's a fun fact: The world's oldest known joke is a Sumerian proverb from 1900 BCE!",
+        "The meaning of life can be different for everyone. It's about finding purpose and happiness in what you do.",
+        "I'm not programmed to sing, but I can certainly chat with you!",
+        "I don't play any instruments, but I'm always here to listen!",
+        "As an AI, I don't have a favorite food, but I'm happy to help you with any questions you have!"
+      ]
+    }
+  ,  
+{
+  "tag": "survey_ques",
+  "patterns": [
+    "Survey","quiz","test"
+  ],
+  "responses": [
+    "Sure! Let's start the survey. Please wait a moment while I fetch the survey for you."
+  ],
+  "action": "survey"
+}
+,
+{
+  
+      "tag": "stress",
+      "patterns": [
+        "I'm feeling stressed",
+        "How do I manage stress?",
+        "I can't handle the stress",
+        "Stress is overwhelming me"
+      ],
+      "responses": [
+        "I understand that stress can be challenging. It's important to take care of yourself. Try deep breathing exercises, practicing mindfulness, or engaging in activities you enjoy to help manage stress.",
+        "Stress can be tough, but remember to prioritize self-care. Taking breaks, getting enough rest, and talking to someone you trust can make a difference.",
+        "Stress is a common issue. It might help to create a routine, set realistic goals, and practice relaxation techniques like yoga or meditation. Don't hesitate to reach out for support if needed."
+      ]
+    },
+    {
+      "tag": "anxiety",
+      "patterns": [
+        "I'm dealing with anxiety",
+        "How do I cope with anxiety?",
+        "Anxiety is taking over",
+        "I feel anxious all the time"
+      ],
+      "responses": [
+        "Anxiety can be challenging, but remember that you're not alone. Try deep breathing exercises, challenging negative thoughts, and engaging in activities that bring you joy to manage anxiety.",
+        "Anxiety can feel overwhelming, but there are coping strategies that can help. Consider practicing mindfulness, seeking professional support, and incorporating relaxation techniques into your daily routine.",
+        "Anxiety is a common struggle. Don't hesitate to reach out for support from a mental health professional. They can provide strategies and support tailored to your specific needs."
+      ]
+    },
+    {
+      "tag": "depression",
+      "patterns": [
+        "I'm feeling depressed",
+        "How do I deal with depression?",
+        "Depression is affecting me",
+        "I can't shake off this sadness"
+      ],
+      "responses": [
+        "I'm sorry to hear that you're feeling depressed. It's important to prioritize self-care and reach out for support. Consider talking to a mental health professional who can provide guidance and treatment options.",
+        "Depression can be challenging, but there is hope. Focus on self-care, maintain a support system, and consider therapy or counseling to help navigate through this difficult time.",
+        "Depression is a serious issue, and it's important to seek help. Reach out to a mental health professional who can offer guidance and develop a personalized plan to support your well-being."
+      ]
+    },
+    {
+      "tag": "fear",
+      "patterns": [
+        "I'm feeling fearful",
+        "How do I overcome fear?",
+        "Fear is paralyzing me",
+        "I can't handle my fears"
+      ],
+      "responses": [
+        "Fear can be overwhelming, but remember that facing your fears can lead to personal growth. Start by taking small steps, seek support from loved ones, and consider professional guidance if needed.",
+        "Fear is a natural response, but it doesn't have to hold you back. Challenge your fears gradually, practice self-compassion, and consider techniques such as cognitive-behavioral therapy to manage and overcome them.",
+        "Fear can feel debilitating, but remember that you have the strength to overcome it. Surround yourself with a supportive network, try relaxation techniques, and consider seeking help from a mental health professional."
+      ]
+    },
+    {
+      "tag": "suicidal",
+      "patterns": [
+        "I'm having suicidal thoughts",
+        "I don't want to live anymore",
+        "I feel hopeless",
+        "I want to end my life"
+      ],
+      "responses": [
+        "I'm really sorry to hear that you're feeling this way. It's important to reach out to a mental health professional or a trusted person in your life right away. In India, you can contact AASRA: +91-9820466726, that provides professional counseling to people.",
+        "I'm really sorry you're experiencing these feelings. Please reach out to a mental health professional or a trusted person in your life as soon as possible. In India, you can also contact GOVT MH Rehabilitation HELPLINE ‘KIRAN’, all across India 1800-5990019",
+        "I'm so sorry you're feeling like this. It's crucial to talk to someone who can help, such as a mental health professional or a trusted person in your life. In Inida, you can reach out to SAHAI, in Bangalore 080-25497777"
+      ]
+    }
+  ]
+}
+
